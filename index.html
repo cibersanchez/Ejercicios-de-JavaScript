@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+            <nav class="navbar bg-primary-subtle -body -tertiary -expand {-sm|-md|-lg|-xl|-xxl} justify-content-end flex-grow-1 pe-3 ">
+                <div class="container-fluid col-sm-12 col-md-6 col-lg-4">
+                    <img src="img/escudo.png" alt="Logo" width="110" height="104" class="d-inline-block align-text-top ">
+                    Ejercicios de JavaScript
+                </div>
+              </nav>
+    </header>
+<div class="container my-3 " >
+    <div class="row ">
+        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 py-4 bg-white caja7" >
+           <form>
+                <div class="mb-3 ">
+                    <label for="nombre" class="form-label">Ejercicio</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ejercicio">
+                  </div>
+                  <div class="mb-3">
+                    <label for="texto" class="form-label">Descrición</label>
+                    <textarea class="form-control" id="texto" rows="3"></textarea>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-success" type="button" onclick="guardar()">Guardar</button>
+                    <button class="btn btn-danger" type="button" onclick="limpiar()">Borrar</button>
+                  </div>
+                  
+                  
+            </form>
+            <script>
+                function guardar() {
+                    // Obtener el valor del input de texto
+                    var texto = document.getElementById("texto").value;
+                    // Verificar si el valor no está vacío
+                    if (texto.trim() !== "") {
+                        // Guardar el texto en algún lugar, por ejemplo, en la consola
+                        console.log("Texto guardado: " + texto);
+                        // Mostrar un mensaje de guardado
+                        alert("Texto guardado");
+                        document.getElementById("texto").value = "";
+                        document.getElementById("nombre").value = "";
+                    } else {
+                        // Mostrar un mensaje de error si el valor está vacío
+                        alert("No se puede guardar texto vacío");
+                    }
+                    
+                }
+                function limpiar() {
+                    // Limpiar el valor del input de texto
+                    document.getElementById("texto").value = "";
+                    // Mostrar un mensaje de limpiado
+                    alert("Texto limpiado");
+                }
+            </script>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 py-4 bg-white">
+            <table class="table  table-striped">
+                <thead>
+                    <tr>
+                        <th class="centrado">Ejercicios de JavaScript</th>
+                        <th class="centrado">leer los ejercicios y dar clip en el bonton calcular</th>
+                        <th class="centrado">botón</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td class="centrado">Ejercicios 1</td>
+                            <td>La Suma entre 2 numeros digitados</td>
+                            <td class="centrado"><div class="d-grid gap-2 d-md-block">
+                                    <button id="suma" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/ejercicios.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 2</td>
+                            <td>La Resta entre 2 numeros digitados</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="resta" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/resta.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 3</td>
+                            <td>La Multiplicacion entre 2 numeros digitados</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="multi" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/multi.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 4</td>
+                            <td>La Divicion entre 2 numeros digitados</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="divi" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/divicion.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 5</td>
+                            <td>La Potencia entre 2 numeros digitados</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="potencia" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/potencia.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 6</td>
+                            <td class="">Hacer un algoritmo que permita leer el nombre y la edad de cualquier persona e imprima, solo si la persona es mayor de edad, el nombre de la persona</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="date" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/date.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 7</td>
+                            <td class="">Ingresar por teclado el nombre y la edad de cualquier persona e imprima solo si la persona es mayor de edad, el nombre de la persona, de lo contrario, imprima un mensaje que diga: “aun no es mayor de edad”</td>
+                            <td class="centrado"><div class="d-grid gap-2 d-md-block mx-auto d-block">
+                                    <button id="datosPersonales" class="btn btn-primary mx-auto d-block" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/dates.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 8</td>
+                            <td> Ingresar por teclado el nombre, la edad, el sexo (1 o 2) y el estado civil de cualquier persona e imprima solo si la persona es un hombre soltero mayor de edad, el nombre de la persona. NOTA: en el campo de estado civil se graba el número 1 en vez de soltero, el número 2 en vez de casado o el número 3 en vez de otro</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block mx-auto d-block">
+                                    <button id="estado" class="btn btn-primary mx-auto d-block" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/estado-civil.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 9</td>
+                            <td>Lea de un registro el nombre, la edad, el sexo y el estado civil de cualquier persona e imprima, solo si la persona es hombre o mujer menor de edad o es hombre casado de cualquier edad, el nombre de la persona y un mensaje que diga “usted aun no es independiente”. En los demás casos imprima el nombre de la persona solamente</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="noveno" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/ejercicio9.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 10</td>
+                            <td>Ingrese un número e imprima el número y el valor absoluto del mismo</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="Dies" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/ejercicio10.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 11</td>
+                            <td>Ingrese dos números desde el teclado e imprima solo los positivos</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="once" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/ejercicio11.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 12</td>
+                            <td>Leer el nombre y el salario básico de un empleado. Para los salarios por debajo de 2 millones, no hay retención. Para un salario básico que se encuentre entre 2 y 3 millones el porcentaje de retención es de 5%. Para un salario mayor de $3.000.000 el porcentaje de retención es 8%. Obtener el nombre del empleado, el salario básico, el valor de la retención y el total por pagar</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="DoceSalario" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/ejercicio12.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 13</td>
+                            <td>Almacenes “Pepita” tiene una promoción: a todas las prendas que tienen un precio superior a $25000 se les aplicará un descuento de 17 %, a todos los demás se les aplicará sólo 5 %. Realice un programa para determinar el precio final que debe pagar una persona por comprar un traje y de cuánto es el descuento que obtendrá</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="trece" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/ejercicio13.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 14</td>
+                            <td>La parrillada” es un restaurante dedicado a ofrecer banquetes para celebraciones; los precios de los platos son los siguientes: el costo de plato por persona es de $10.000, pero si el número de personas es mayor a 90 pero menor o igual a 150, el costo es de $8500. Para más de 150 personas el costo por plato es de $7500. Se requiere un sistema de información que ayude a determinar el presupuesto que se debe presentar a los clientes que deseen realizar un evento. Para el desarrollo del sistema, se requiere conocer el número de personas que se presupuestarán para el banquete (celebración), y con base en éstas determinar el costo del plato que en cierta forma es constante, con éste se determinará cuánto debe pagar el cliente en total</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="restaurante" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/ejercicio14.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 15</td>
+                            <td>El consultorio del Ginecólogo Vergara tiene como política cobrar la consulta con base en el número de cita, de la siguiente forma:
+                                <br>
+                                • Las tres primeras citas a $100.000 c/u.
+                                <br>
+                                • Las siguientes dos citas a $80.000 c/u.
+                                <br>
+                                • Las tres siguientes citas a $70.000 c/u.
+                                <br>
+                                • Las restantes a $50.000 c/u, mientras dure el tratamiento.
+                                <br>
+                                Se requiere un sistema de información para determinar:
+                                <br>
+                                a. Cuánto pagará el paciente por la cita.
+                                <br>
+                                b. El monto de lo que ha pagado el paciente por el tratamiento.
+                                <br>
+                                Para la solución de este problema se requiere saber qué número de cita se efectuará, con el cual se podrá determinar el costo que tendrá la consulta y cuánto se ha gastado en el tratamiento</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="consultorio" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/ejercicio15.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 16</td>
+                            <td>la electrificadora de la ciudad del espinal desea un programa permita calcular el consumo de un determinado numero de cliente, teniendo en cuenta las lecturas  actual y la anterior, dicha lectura son digitadas  por el usuario. el valor de vatios es ingresado por teclado y al final se desea conocer. el consumo de cada cliente con su total a pagar y el promedio general de consumo del grupo de clientes</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="espinal" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/ejercicio16.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 17</td>
+                            <td>la electrificadora de la ciudad del espinal desea un programa que permita calcular el consumo de un determinado numero de cliente, pidamos el nombre, estrato de vivienda teniendo si estrato 1 tiene un subsidio de 20% si estrato 2 un subsidio 10 % y es estrato 3 no tiene subsidio, teniendo en cuenta las lecturas  actual y la anterior, dicha lectura son digitadas  por el usuario. el valor de vatios es ingresado por teclado y al final se desea conocer. el consumo de cada cliente con su total a pagar y el promedio general de consumo del grupo de clientes, el nombre del que tiene el subsidio mas alto con su estrato y el nombre del que tiene el subsidio mas bajo</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="Tolima" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/ejercicio17.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 18</td>
+                            <td>hacer un programa en JavaScript donde Un canal de
+                                televisión desea conocer de una cantidad de personas registradas con su nombre,
+                                edad y género (masculino, femenino), una estadística para determinar las
+                                franjas y programas de televisión a presentar. Para ello desea contar con un programa que permita conocer según los rangos de edad:
+                                <br>
+                                •	Infantil: de 0 a 12 años
+                                <br>
+                                •	Juvenil: de 13 a 20 años
+                                <br>
+                                •	Adulta: de 21 a 59 años
+                                <br>
+                                •	Tercera edad: de 60 años en adelante.
+                                <br>
+                                Con esta informaciónse requiere conocer específicamente:
+                                <br>
+                                •	Cuantos televidentes son de la franja infantil de género masculino.
+                                <br>
+                                •	Cuantos televidentes son de la franja infantil de género femenino.
+                                <br>
+                                •	Cuantos televidentes son de la franja juvenil de género masculino.
+                                <br>
+                                •	Cuantos televidentes son de la franja juvenil de género femenino.
+                                <br>
+                                •	Cuantos televidentes son de la franja adulta de género masculino.
+                                <br>
+                                •	Cuantos televidentes son de la franja adulta de género femenino.
+                                <br>
+                                •	Cuantos televidentes son de la franja adulta de la tercera edad masculino.
+                                <br>
+                                •	Cuantos televidentes son de la franja adulta de la tercera edad femenino.
+                                <br>
+                                •	Finalmente se desea conocer la edad promedio de cada franja sin importar el género</td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="Franjas" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/ejercicio18.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 19</td>
+                            <td>hacer una matriz donde el usuario de las dimensión y imprimir si la dimisiones son iguales mostramos la suma productos , multiplicación productos, la inversa, la diagonal  y los números pares y impares </td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="matrix" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/ejercicio19.js"></script>
+                        </tr>
+                        <tr>
+                            <td class="centrado">Ejercicios 20</td>
+                            <td>un profesor de "ITFIP" necesitan un programa en JavaScript don el ingrese la cantidad de estudiantes, la cantidad de notas, el nombre, el apellido y código, la nota mala es inferior a 3 la nota regular es de 3 a 4 y la nota excelente de más 4.1 a 5. imprimimos los mejores estudiantes con su código nombre y apellido, el estudiante con la nota regular con su código nombre y apellido, y el estudiante con la nota mala con su código nombre y apellido. y el total de nota acumuladas </td>
+                            <td class="centrado">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button id="notas" class="btn btn-primary" type="button">Calcular</button>
+                                </div>
+                            </td>
+                            <script src="ejercicios/ejercicio20.js"></script>
+                        </tr>
+                    </tbody>
+                </thead>
+            </table>
+
+        </div>
+    </div>
+</div>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body {
+    background: #74ebd5;  
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); 
+}
+.caja7{
+    background: #74ebd5;  
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  
+    background: linear-gradient(to right, #ACB6E5, #74ebd5);
+}
+#descricion{
+    resize: none;
+}
+.bg-white{
+    background-color: #ffffff;
+}
+.centrado{
+    text-align: center;
+    vertical-align: middle;
+}
